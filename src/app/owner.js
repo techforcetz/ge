@@ -1,6 +1,7 @@
 // components/Owners.jsx
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
@@ -103,7 +104,7 @@ export default function Owners() {
                   <div className="relative pt-8 px-8 flex flex-col items-center">
                     <div className="relative">
                       <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-yellow-400/30 shadow-lg">
-                        <img
+                        <Image
                           src={member.image}
                           alt={member.name}
                           className="object-cover w-full h-full transition-transform duration-500 hover:scale-110"

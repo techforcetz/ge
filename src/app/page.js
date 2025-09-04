@@ -6,6 +6,7 @@ import OwnersCarousel from "@/app/owner";
 import Projects from "./projects";
 import Footer from "./footer";
 import ReviewsPage from "./reviews";
+import Image from "next/image";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -168,7 +169,7 @@ const Home = () => {
         transition={{ duration: 1.3 }}
         className="md:w-1/2 w-full flex justify-center mb-8 md:mb-0 items-center"
       >
-        <img
+        <Image
           src="https://images.pexels.com/photos/32751450/pexels-photo-32751450.jpeg"
           alt="Owners"
           className="rounded-lg shadow-lg object-cover w-full max-w-md md:max-w-lg  h-auto"

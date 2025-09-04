@@ -1,6 +1,7 @@
 // app/reviews/page.jsx (Next.js App Router)
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { FaStar, FaRegStar, FaQuoteRight } from "react-icons/fa";
 
@@ -103,7 +104,7 @@ export default function ReviewsPage() {
             <div className="flex flex-col md:flex-row items-center">
               <div className="mb-6 md:mb-0 md:mr-8 flex-shrink-0">
                 <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-white shadow-lg">
-                  <img
+                  <Image
                     src={reviews[current].image}
                     alt={reviews[current].name}
                     className="object-cover w-full h-full"
@@ -201,7 +202,7 @@ export default function ReviewsPage() {
             >
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
-                  <img
+                  <Image
                     src={review.image}
                     alt={review.name}
                     className="object-cover w-full h-full"

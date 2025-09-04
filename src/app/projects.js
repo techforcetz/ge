@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 
 const Projects = () => {
   // Sample project data - replace with your actual projects
@@ -158,7 +160,7 @@ const Projects = () => {
                 >
                   {/* Project Image */}
                   <div className="relative h-48 sm:h-52 overflow-hidden">
-                    <img 
+                    <Image 
                       src={project.image} 
                       alt={project.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
