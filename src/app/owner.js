@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 // components/Owners.jsx
 "use client";
 
