@@ -60,7 +60,7 @@ export default function Owners() {
     return () => {
       if (interval) clearInterval(interval);
     };
-  }, [current, isAutoPlaying]);
+  }, [isAutoPlaying,nextSlide]);
 
   return (
     <section className="w-full py-16 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
