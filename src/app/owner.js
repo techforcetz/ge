@@ -50,17 +50,14 @@ export default function Owners() {
   };
 
   // Auto-play functionality
-  useEffect(() => {
-    let interval;
-    if (isAutoPlaying) {
-      interval = setInterval(() => {
-        nextSlide();
-      }, 5000);
-    }
-    return () => {
-      if (interval) clearInterval(interval);
-    };
-  }, [isAutoPlaying,nextSlide]);
+useEffect(() => {
+  if (!isAutoPlaying) return;
+  const interval = setInterval(() => {
+    setCurrent((prev) => (prev === length - 1 ? 0 : prev + 1));
+  }, 5000);
+  return () => clearInterval(interval);
+}, [isAutoPlaying, length]);
+
 
   return (
     <section className="w-full py-16 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
